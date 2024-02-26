@@ -1,13 +1,24 @@
 package com.bursu.springinaction.tacos;
 
-import lombok.Data;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.*;
 
 @Data
-public class Ingredient {
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED, force = true)
+public class Ingredient  {
 
+    @Id
     private final String id;
     private final String name;
     private final Type type;
+//
+//    @Override
+//    public boolean isNew() {
+//        return false;
+//    }
 
     public enum Type {
         WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE
