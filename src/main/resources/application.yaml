@@ -2,5 +2,9 @@ spring:
   datasource:
     generate-unique-name: false
     name: tacocloud
+  jpa:
+    hibernate:
+      ddl-auto: create
+    generate-ddl: on
 server:
   port: 2222
