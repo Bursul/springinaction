@@ -14,6 +14,7 @@ import java.util.List;
 
 @Data
 @Entity
+@Table(name = "Taco_Order")
 public class TacoOrder implements Serializable {
 
     public static final long serialVersionUID = 1L;
@@ -21,6 +22,9 @@ public class TacoOrder implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    @ManyToOne
+    private User user;
 
     private Date placedAt;
 

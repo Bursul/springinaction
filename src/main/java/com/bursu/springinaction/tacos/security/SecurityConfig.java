@@ -33,7 +33,8 @@ public class SecurityConfig {
                 .requestMatchers("/", "/**").permitAll())
                 .formLogin(formLogin -> formLogin
                         .loginPage("/login")
-                        .defaultSuccessUrl("/design"));
+                        .defaultSuccessUrl("/design"))
+                .logout(logout -> logout.logoutSuccessUrl("/"));
 
         return http.build();
     }

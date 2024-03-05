@@ -60,6 +60,10 @@ Listing 2.5 The complete design-a-taco page
         <br/>
         <button>Submit Your Taco</button>
     </div>
+
+    <form method="POST" th:action="@{/logout}">
+        <input type="submit" value="Logout"/>
+    </form>
 </form>
 </body>
 </html>
